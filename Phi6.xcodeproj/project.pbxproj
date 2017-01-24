@@ -15,6 +15,15 @@
 		871CAB281E374F84004F2DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871CAB261E374F84004F2DD0 /* Main.storyboard */; };
 		871CAB2A1E374F84004F2DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871CAB291E374F84004F2DD0 /* Assets.xcassets */; };
 		871CAB2D1E374F84004F2DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871CAB2B1E374F84004F2DD0 /* LaunchScreen.storyboard */; };
+		878029931E37D76C00AA5EE9 /* GameScene-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029921E37D76C00AA5EE9 /* GameScene-Alpha.swift */; };
+		878029951E37D78400AA5EE9 /* GameViewController-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029941E37D78400AA5EE9 /* GameViewController-Alpha.swift */; };
+		878029971E37D81800AA5EE9 /* SimpleObjectNode-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029961E37D81800AA5EE9 /* SimpleObjectNode-Alpha.swift */; };
+		878029991E37D85E00AA5EE9 /* TriangleNode-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029981E37D85E00AA5EE9 /* TriangleNode-Alpha.swift */; };
+		8780299B1E37D88300AA5EE9 /* RectangleNode-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299A1E37D88300AA5EE9 /* RectangleNode-Alpha.swift */; };
+		8780299D1E37D8A400AA5EE9 /* CircleNode-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299C1E37D8A400AA5EE9 /* CircleNode-Alpha.swift */; };
+		8780299F1E37D8C800AA5EE9 /* Singleton-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299E1E37D8C800AA5EE9 /* Singleton-Alpha.swift */; };
+		878029A11E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029A01E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift */; };
+		878029A31E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029A21E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		871CAB291E374F84004F2DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		871CAB2C1E374F84004F2DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		871CAB2E1E374F84004F2DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		878029921E37D76C00AA5EE9 /* GameScene-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene-Alpha.swift"; sourceTree = "<group>"; };
+		878029941E37D78400AA5EE9 /* GameViewController-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController-Alpha.swift"; sourceTree = "<group>"; };
+		878029961E37D81800AA5EE9 /* SimpleObjectNode-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SimpleObjectNode-Alpha.swift"; sourceTree = "<group>"; };
+		878029981E37D85E00AA5EE9 /* TriangleNode-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TriangleNode-Alpha.swift"; sourceTree = "<group>"; };
+		8780299A1E37D88300AA5EE9 /* RectangleNode-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RectangleNode-Alpha.swift"; sourceTree = "<group>"; };
+		8780299C1E37D8A400AA5EE9 /* CircleNode-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CircleNode-Alpha.swift"; sourceTree = "<group>"; };
+		8780299E1E37D8C800AA5EE9 /* Singleton-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Singleton-Alpha.swift"; sourceTree = "<group>"; };
+		878029A01E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectTableViewController-Alpha.swift"; sourceTree = "<group>"; };
+		878029A21E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectTableViewCell-Alpha.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +87,25 @@
 				871CAB291E374F84004F2DD0 /* Assets.xcassets */,
 				871CAB2B1E374F84004F2DD0 /* LaunchScreen.storyboard */,
 				871CAB2E1E374F84004F2DD0 /* Info.plist */,
+				878029A41E37D95B00AA5EE9 /* Alpha Files */,
 			);
 			path = Phi6;
+			sourceTree = "<group>";
+		};
+		878029A41E37D95B00AA5EE9 /* Alpha Files */ = {
+			isa = PBXGroup;
+			children = (
+				878029921E37D76C00AA5EE9 /* GameScene-Alpha.swift */,
+				878029941E37D78400AA5EE9 /* GameViewController-Alpha.swift */,
+				878029961E37D81800AA5EE9 /* SimpleObjectNode-Alpha.swift */,
+				878029981E37D85E00AA5EE9 /* TriangleNode-Alpha.swift */,
+				8780299A1E37D88300AA5EE9 /* RectangleNode-Alpha.swift */,
+				8780299C1E37D8A400AA5EE9 /* CircleNode-Alpha.swift */,
+				8780299E1E37D8C800AA5EE9 /* Singleton-Alpha.swift */,
+				878029A01E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift */,
+				878029A21E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift */,
+			);
+			name = "Alpha Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +185,16 @@
 			files = (
 				871CAB231E374F84004F2DD0 /* GameScene.swift in Sources */,
 				871CAB251E374F84004F2DD0 /* GameViewController.swift in Sources */,
+				8780299F1E37D8C800AA5EE9 /* Singleton-Alpha.swift in Sources */,
+				878029A31E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift in Sources */,
+				8780299B1E37D88300AA5EE9 /* RectangleNode-Alpha.swift in Sources */,
 				871CAB1D1E374F84004F2DD0 /* AppDelegate.swift in Sources */,
+				878029951E37D78400AA5EE9 /* GameViewController-Alpha.swift in Sources */,
+				878029931E37D76C00AA5EE9 /* GameScene-Alpha.swift in Sources */,
+				878029971E37D81800AA5EE9 /* SimpleObjectNode-Alpha.swift in Sources */,
+				878029A11E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift in Sources */,
+				878029991E37D85E00AA5EE9 /* TriangleNode-Alpha.swift in Sources */,
+				8780299D1E37D8A400AA5EE9 /* CircleNode-Alpha.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +358,7 @@
 				871CAB331E374F84004F2DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
