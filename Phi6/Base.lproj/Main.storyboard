@@ -99,6 +99,7 @@
                         <outlet property="LevelView" destination="yBZ-TR-FA4" id="PF8-Tm-ZdB"/>
                         <outlet property="backButton" destination="0wa-BC-gWh" id="G5T-j6-hBp"/>
                         <outlet property="pageControl" destination="5CC-f9-UM1" id="isX-F3-Vwz"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="joinGameSegue" id="U60-fV-CIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zob-eF-Nv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
