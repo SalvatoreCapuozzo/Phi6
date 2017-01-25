@@ -1,16 +1,16 @@
 //
-//  CarusiellViewController.swift
+//  LevelViewController.swift
 //  Phi6
 //
-//  Created by Armando Ariemma on 24/01/2017.
+//  Created by Giovanni Prota on 25/01/17.
 //  Copyright © 2017 ITNH. All rights reserved.
 //
 
 import UIKit
 
-class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
-
-    @IBOutlet weak var CategoryView: UIView!
+class LevelViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
+    
+    @IBOutlet weak var LevelView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -18,7 +18,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let carousel = iCarousel(frame: CategoryView.frame)
+        let carousel = iCarousel(frame: LevelView.frame)
         carousel.delegate = self
         carousel.dataSource = self
         carousel.type = .linear
@@ -42,7 +42,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         if view != nil {
             imageView = view as! UIImageView
         } else {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: CategoryView.frame.width - 160, height: CategoryView.frame.height))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: LevelView.frame.width - 160, height: LevelView.frame.height))
         }
         
         
@@ -55,10 +55,5 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
         pageControl.currentPage = carousel.currentItemIndex
-    }
-    
-    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-        self.performSegue(withIdentifier: "levelSegue", sender: carousel)
-    }
-
+}
 }
