@@ -57,4 +57,12 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         pageControl.currentPage = carousel.currentItemIndex
     }
     
+<<<<<<< Updated upstream
+=======
+    
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        self.performSegue(withIdentifier: "categorySelected", sender: carousel)
+    }
+    
+>>>>>>> Stashed changes
 }
