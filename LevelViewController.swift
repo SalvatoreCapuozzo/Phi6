@@ -57,6 +57,6 @@ class LevelViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
         pageControl.currentPage = carousel.currentItemIndex
 }
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-        self.performSegue(withIdentifier: "joinGameSegye", sender: carousel)
+        self.performSegue(withIdentifier: "joinGameSegue", sender: carousel)
     }
 }
