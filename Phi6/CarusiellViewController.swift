@@ -10,7 +10,7 @@ import UIKit
 
 class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
 
-    @IBOutlet weak var CategoryView: UIView!
+    @IBOutlet weak var levelView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -18,7 +18,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let carousel = iCarousel(frame: CategoryView.frame)
+        let carousel = iCarousel(frame: levelView.frame)
         carousel.delegate = self
         carousel.dataSource = self
         carousel.type = .linear
@@ -42,7 +42,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         if view != nil {
             imageView = view as! UIImageView
         } else {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: CategoryView.frame.width - 160, height: CategoryView.frame.height))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: levelView.frame.width - 160, height: levelView.frame.height))
         }
         
         
@@ -57,7 +57,4 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         pageControl.currentPage = carousel.currentItemIndex
     }
     
-    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-        self.performSegue(withIdentifier: "categorySelected", sender: carousel)
-    }
 }

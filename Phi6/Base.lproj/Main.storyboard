@@ -32,7 +32,7 @@
                                     <action selector="backPressed:" destination="FLc-n6-7bX" eventType="touchUpInside" id="c45-VC-hTM"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9w-zw-yvi" userLabel="Category View">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9w-zw-yvi">
                                 <rect key="frame" x="0.0" y="44" width="667" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,62 +47,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="CategoryView" destination="T9w-zw-yvi" id="NZE-tc-qmd"/>
                         <outlet property="backButton" destination="lFx-ZQ-EKV" id="5wv-kf-ecS"/>
+                        <outlet property="levelView" destination="T9w-zw-yvi" id="p4C-b1-jpD"/>
                         <outlet property="pageControl" destination="1gp-Yr-jDg" id="QHW-He-r8B"/>
-                        <segue destination="hou-8k-IdJ" kind="show" identifier="categorySelected" id="yA3-Nm-poh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06c-A6-1m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1013" y="-399"/>
-        </scene>
-        <!--Level View Controller-->
-        <scene sceneID="fij-CX-Gju">
-            <objects>
-                <viewController id="hou-8k-IdJ" userLabel="Level View Controller" customClass="LevelViewController" customModule="Phi6" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AdW-YZ-Yiq"/>
-                        <viewControllerLayoutGuide type="bottom" id="yhy-4R-rkV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NaH-GZ-SDE">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uD-Bf-Hc1">
-                                <rect key="frame" x="0.0" y="61" width="667" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="NUI-IQ-T11">
-                                <rect key="frame" x="314" y="330" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-He-qm0">
-                                <rect key="frame" x="20" y="330" width="30" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="&lt;">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="backPressed:" destination="hou-8k-IdJ" eventType="touchUpInside" id="5Aj-4r-SEs"/>
-                                    <action selector="backPressed:" destination="FLc-n6-7bX" eventType="touchUpInside" id="ZE2-Za-Oz7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="levelView" destination="8uD-Bf-Hc1" id="141-tc-5OK"/>
-                        <outlet property="pageControl" destination="NUI-IQ-T11" id="13t-Ar-UWt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BEE-Y2-2Eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1013" y="847"/>
+            <point key="canvasLocation" x="-383.65817091454278" y="-807.20000000000005"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hVK-Y2-Aa0">
@@ -157,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niZ-Ka-u9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1013" y="-1564"/>
+            <point key="canvasLocation" x="-1615" y="-807"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
