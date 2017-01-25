@@ -24,6 +24,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         carousel.type = .linear
         view.addSubview(carousel)
         pageControl.numberOfPages = numberOfItems(in: carousel)
+        carousel.bounceDistance = 0.3
         
     }
     
@@ -46,7 +47,8 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         
         
         
-        imageView.image = UIImage(named: "giovanniprota")
+        imageView.image = UIImage(named: "question")
+        imageView.contentMode = .scaleAspectFit
         
         return imageView
     }
