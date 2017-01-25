@@ -10,18 +10,25 @@ import UIKit
 
 class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
 
+    @IBOutlet weak var levelView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let carousel = iCarousel(frame: self.view.frame)
+        let carousel = iCarousel(frame: levelView.frame)
         carousel.dataSource = self
-        carousel.type = .timeMachine
+        carousel.type = .linear
         view.addSubview(carousel)
         
     }
     
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 10
+        return 3
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
@@ -30,8 +37,10 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         if view != nil {
             imageView = view as! UIImageView
         } else {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 256))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: levelView.frame.width - 160, height: levelView.frame.height))
         }
+        
+        
         
         imageView.image = UIImage(named: "giovanniprota")
         

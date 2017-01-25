@@ -517,7 +517,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
         }
         case iCarouselTypeLinear:
         {
-            CGFloat spacing = [self valueForOption:iCarouselOptionSpacing withDefault:1.0];
+            CGFloat spacing = [self valueForOption:iCarouselOptionSpacing withDefault:1.4];
             if (_vertical)
             {
                 return CATransform3DTranslate(transform, 0.0, offset * _itemWidth * spacing, 0.0);
@@ -611,7 +611,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
         case iCarouselTypeCoverFlow2:
         {
             CGFloat tilt = [self valueForOption:iCarouselOptionTilt withDefault:0.9];
-            CGFloat spacing = [self valueForOption:iCarouselOptionSpacing withDefault:0.25];
+            CGFloat spacing = [self valueForOption:iCarouselOptionSpacing withDefault:0.75];
             CGFloat clampedOffset = MAX(-1.0, MIN(1.0, offset));
 
             if (_type == iCarouselTypeCoverFlow2)
