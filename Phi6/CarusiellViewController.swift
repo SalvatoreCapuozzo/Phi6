@@ -12,7 +12,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
 
     @IBOutlet weak var CategoryView: UIView!
     @IBOutlet weak var backButton: UIButton!
-    
+    var selectedIndex : Int = 0
     @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
@@ -58,7 +58,17 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
     }
     
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        selectedIndex = index
         self.performSegue(withIdentifier: "levelSegue", sender: carousel)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "levelSegue" {
+            let livelli = segue.destination as! LevelViewController
+            print(selectedIndex)
+            
+        } else {}
+        
     }
 
 }
