@@ -13,13 +13,17 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
     @IBOutlet weak var levelView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let carousel = iCarousel(frame: levelView.frame)
+        carousel.delegate = self
         carousel.dataSource = self
         carousel.type = .linear
         view.addSubview(carousel)
+        pageControl.numberOfPages = numberOfItems(in: carousel)
         
     }
     
@@ -28,7 +32,7 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 3
+        return 4
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
@@ -46,4 +50,9 @@ class CarusiellViewController: UIViewController, iCarouselDataSource, iCarouselD
         
         return imageView
     }
+    
+    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
+        pageControl.currentPage = carousel.currentItemIndex
+    }
+    
 }
