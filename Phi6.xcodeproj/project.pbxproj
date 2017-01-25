@@ -67,6 +67,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AC3E0C41E38ACA000FA0D7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5AC3E0C51E38ACAC00FA0D7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				871CAB1E1E374F84004F2DD0 /* GameScene.sks */,
+				871CAB201E374F84004F2DD0 /* Actions.sks */,
+				871CAB221E374F84004F2DD0 /* GameScene.swift */,
+				871CAB261E374F84004F2DD0 /* Main.storyboard */,
+				871CAB291E374F84004F2DD0 /* Assets.xcassets */,
+				871CAB2B1E374F84004F2DD0 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5AC3E0C61E38ACB800FA0D7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				871CAB241E374F84004F2DD0 /* GameViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5AC3E0C71E38ACFD00FA0D7D /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				816CD0C51E3806D3003DE7E3 /* iCarousel.h */,
+				816CD0C61E3806D3003DE7E3 /* iCarousel.m */,
+				816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */,
+				816CD0C41E3806D2003DE7E3 /* Phi6-Bridging-Header.h */,
+			);
+			name = iCarousel;
+			sourceTree = "<group>";
+		};
 		871CAB101E374F84004F2DD0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,20 +125,13 @@
 		871CAB1B1E374F84004F2DD0 /* Phi6 */ = {
 			isa = PBXGroup;
 			children = (
+				5AC3E0C41E38ACA000FA0D7D /* Model */,
+				5AC3E0C51E38ACAC00FA0D7D /* View */,
+				5AC3E0C61E38ACB800FA0D7D /* Controller */,
+				5AC3E0C71E38ACFD00FA0D7D /* iCarousel */,
 				871CAB1C1E374F84004F2DD0 /* AppDelegate.swift */,
-				871CAB1E1E374F84004F2DD0 /* GameScene.sks */,
-				871CAB201E374F84004F2DD0 /* Actions.sks */,
-				871CAB221E374F84004F2DD0 /* GameScene.swift */,
-				816CD0C51E3806D3003DE7E3 /* iCarousel.h */,
-				816CD0C61E3806D3003DE7E3 /* iCarousel.m */,
-				871CAB241E374F84004F2DD0 /* GameViewController.swift */,
-				871CAB261E374F84004F2DD0 /* Main.storyboard */,
-				871CAB291E374F84004F2DD0 /* Assets.xcassets */,
-				871CAB2B1E374F84004F2DD0 /* LaunchScreen.storyboard */,
 				871CAB2E1E374F84004F2DD0 /* Info.plist */,
-				816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */,
 				878029A41E37D95B00AA5EE9 /* Alpha Files */,
-				816CD0C41E3806D2003DE7E3 /* Phi6-Bridging-Header.h */,
 				816CD0CA1E3807E9003DE7E3 /* giovanniprota.png */,
 			);
 			path = Phi6;
