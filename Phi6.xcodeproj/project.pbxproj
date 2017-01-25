@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8116C1511E38B2340075A006 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116C1501E38B2340075A006 /* MainViewController.swift */; };
+		8116C1531E38C1060075A006 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 8116C1521E38C1060075A006 /* question.png */; };
 		816CD0C71E3806D3003DE7E3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 816CD0C61E3806D3003DE7E3 /* iCarousel.m */; };
 		816CD0C91E38078E003DE7E3 /* CarusiellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */; };
 		816CD0CB1E3807E9003DE7E3 /* giovanniprota.png in Resources */ = {isa = PBXBuildFile; fileRef = 816CD0CA1E3807E9003DE7E3 /* giovanniprota.png */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		8116C1501E38B2340075A006 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8116C1521E38C1060075A006 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
 		816CD0C41E3806D2003DE7E3 /* Phi6-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phi6-Bridging-Header.h"; sourceTree = "<group>"; };
 		816CD0C51E3806D3003DE7E3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		816CD0C61E3806D3003DE7E3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		5AC3E0C61E38ACB800FA0D7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */,
 				871CAB241E374F84004F2DD0 /* GameViewController.swift */,
 				8116C1501E38B2340075A006 /* MainViewController.swift */,
 			);
@@ -103,7 +106,6 @@
 			children = (
 				816CD0C51E3806D3003DE7E3 /* iCarousel.h */,
 				816CD0C61E3806D3003DE7E3 /* iCarousel.m */,
-				816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */,
 				816CD0C41E3806D2003DE7E3 /* Phi6-Bridging-Header.h */,
 			);
 			name = iCarousel;
@@ -136,6 +138,7 @@
 				871CAB2E1E374F84004F2DD0 /* Info.plist */,
 				878029A41E37D95B00AA5EE9 /* Alpha Files */,
 				816CD0CA1E3807E9003DE7E3 /* giovanniprota.png */,
+				8116C1521E38C1060075A006 /* question.png */,
 			);
 			path = Phi6;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				871CAB281E374F84004F2DD0 /* Main.storyboard in Resources */,
 				816CD0CB1E3807E9003DE7E3 /* giovanniprota.png in Resources */,
+				8116C1531E38C1060075A006 /* question.png in Resources */,
 				871CAB1F1E374F84004F2DD0 /* GameScene.sks in Resources */,
 				871CAB2A1E374F84004F2DD0 /* Assets.xcassets in Resources */,
 				871CAB2D1E374F84004F2DD0 /* LaunchScreen.storyboard in Resources */,
