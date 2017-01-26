@@ -2,62 +2,95 @@
 //  LevelViewController.swift
 //  Phi6
 //
-//  Created by Giovanni Prota on 25/01/17.
+//  Created by Armando Ariemma on 26/01/2017.
 //  Copyright © 2017 ITNH. All rights reserved.
 //
 
 import UIKit
 
-class LevelViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
-    
-    @IBOutlet weak var LevelView: UIView!
-    @IBOutlet weak var backButton: UIButton!
-    
-    @IBOutlet weak var pageControl: UIPageControl!
+private let reuseIdentifier = "Cell"
+
+class LevelViewController: UICollectionViewController {
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let carousel = iCarousel(frame: LevelView.frame)
-        carousel.delegate = self
-        carousel.dataSource = self
-        carousel.type = .linear
-        view.addSubview(carousel)
-        pageControl.numberOfPages = numberOfItems(in: carousel)
-        carousel.bounceDistance = 0.3
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Register cell classes
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
+        // Do any additional setup after loading the view.
     }
-    
-    @IBAction func backPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return 4
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
     }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let imageView: UIImageView
-        
-        if view != nil {
-            imageView = view as! UIImageView
-        } else {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: LevelView.frame.width - 160, height: LevelView.frame.height))
-        }
-        
-        
-        
-        imageView.image = UIImage(named: "question")
-        imageView.contentMode = .scaleAspectFit
-        
-        return imageView
+    */
+
+    // MARK: UICollectionViewDataSource
+
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
-    
-    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
-        pageControl.currentPage = carousel.currentItemIndex
-}
-    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-        self.performSegue(withIdentifier: "joinGameSegue", sender: carousel)
+
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return 1000
     }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "level", for: indexPath)
+        
     
+        // Configure the cell
+    
+        return cell
+    }
+
+    // MARK: UICollectionViewDelegate
+
+    /*
+    // Uncomment this method to specify if the specified item should be highlighted during tracking
+    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    */
+
+    /*
+    // Uncomment this method to specify if the specified item should be selected
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    */
+
+    /*
+    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return false
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    
+    }
+    */
+
 }

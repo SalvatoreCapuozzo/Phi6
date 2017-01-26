@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30BF163A1E38C62900C5C033 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF16391E38C62900C5C033 /* LevelViewController.swift */; };
 		8116C1511E38B2340075A006 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116C1501E38B2340075A006 /* MainViewController.swift */; };
 		8116C1531E38C1060075A006 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 8116C1521E38C1060075A006 /* question.png */; };
+		8169B4DF1E39F95900E84B50 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169B4DE1E39F95900E84B50 /* LevelViewController.swift */; };
 		816CD0C71E3806D3003DE7E3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 816CD0C61E3806D3003DE7E3 /* iCarousel.m */; };
 		816CD0C91E38078E003DE7E3 /* CarusiellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */; };
 		816CD0CB1E3807E9003DE7E3 /* giovanniprota.png in Resources */ = {isa = PBXBuildFile; fileRef = 816CD0CA1E3807E9003DE7E3 /* giovanniprota.png */; };
@@ -33,9 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30BF16391E38C62900C5C033 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = ../LevelViewController.swift; sourceTree = "<group>"; };
 		8116C1501E38B2340075A006 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8116C1521E38C1060075A006 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		8169B4DE1E39F95900E84B50 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = ../LevelViewController.swift; sourceTree = "<group>"; };
 		816CD0C41E3806D2003DE7E3 /* Phi6-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phi6-Bridging-Header.h"; sourceTree = "<group>"; };
 		816CD0C51E3806D3003DE7E3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		816CD0C61E3806D3003DE7E3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		5AC3E0C61E38ACB800FA0D7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				30BF16391E38C62900C5C033 /* LevelViewController.swift */,
+				8169B4DE1E39F95900E84B50 /* LevelViewController.swift */,
 				816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */,
 				871CAB241E374F84004F2DD0 /* GameViewController.swift */,
 				8116C1501E38B2340075A006 /* MainViewController.swift */,
@@ -251,7 +251,7 @@
 				878029931E37D76C00AA5EE9 /* GameScene-Alpha.swift in Sources */,
 				8116C1511E38B2340075A006 /* MainViewController.swift in Sources */,
 				816CD0C91E38078E003DE7E3 /* CarusiellViewController.swift in Sources */,
-				30BF163A1E38C62900C5C033 /* LevelViewController.swift in Sources */,
+				8169B4DF1E39F95900E84B50 /* LevelViewController.swift in Sources */,
 				878029971E37D81800AA5EE9 /* SimpleObjectNode-Alpha.swift in Sources */,
 				878029A11E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift in Sources */,
 				878029991E37D85E00AA5EE9 /* TriangleNode-Alpha.swift in Sources */,
