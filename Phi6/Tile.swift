@@ -33,6 +33,12 @@ class Tile : SKSpriteNode
                    color: UIColor(red: 1, green: 1, blue: 1, alpha: 1),
                    size: CGSize(width: tileSize, height: tileSize))
         self.position = pos
+        
+        // Setta il PhysicsBody
+        var phyBody = SKPhysicsBody(texture: subTexture!, size: CGSize(width: tileSize, height: tileSize))
+        phyBody.isDynamic = false
+        
+        self.physicsBody = phyBody
     }
     
     required init?(coder aDecoder: NSCoder)

@@ -13,6 +13,8 @@ class GameScene: SKScene
 {
     private var cam = SKCameraNode()
     private var testMap: TileMap?
+    private var touchStartPos: CGPoint?
+    private var touchEndPos: CGPoint?
     
     override init(size: CGSize)
     {
@@ -26,7 +28,7 @@ class GameScene: SKScene
         
         do
         {
-            testMap = try TileMap(filename: "map_00")
+            testMap = try TileMap(filename: "map_01")
             testMap?.Render(self)
         }
         catch
@@ -44,50 +46,40 @@ class GameScene: SKScene
     {
         super.sceneDidLoad()
         
-        /*let tileset = Tileset(name: "pkmn_tileset", tSize: 16)
-        /*addChild(Tile(tSet: tileset, pos: CGPoint(x: 100, y: 100), id: 0))
-        addChild(Tile(tSet: tileset, pos: CGPoint(x: 116, y: 100), id: 1))
-        addChild(Tile(tSet: tileset, pos: CGPoint(x: 132, y: 100), id: 2))*/
+        let phiSphere = SKSpriteNode(imageNamed: "PhiSphere")
+        phiSphere.position = CGPoint(x: 10, y: 300)
+        phiSphere.size = CGSize(width: 32, height: 32)
+        var spherePhysics = SKPhysicsBody(circleOfRadius: 16)
+        spherePhysics.mass = 100
+        //spherePhysics.friction = 0
+        //spherePhysics.isDynamic = false
+        spherePhysics.usesPreciseCollisionDetection = true
+        phiSphere.physicsBody = spherePhysics
         
-        var currentIndex = 0
-        var x = 0
-        var y = 0
-        var keepAdding: Bool = true
-        
-        while(y < Int(tileset.GetTextureAtlas().size().height) && keepAdding)
-        {
-            x = 0
-            
-            while(x < Int(tileset.GetTextureAtlas().size().width) && keepAdding)
-            {
-                addChild(Tile(tSet: tileset, pos: CGPoint(x: CGFloat(x), y: self.frame.maxY - CGFloat(y)), id: currentIndex))
-                
-                x += 16
-                currentIndex += 1
-                
-                if currentIndex > tileset.GetNumberOfTiles()
-                {
-                    keepAdding = false
-                }
-            }
-            
-            y += 16
-        }*/
-        
-        /*
-        let tile0 = SKSpriteNode(texture: SKTexture(rect: tileset.GetTileRect(0)!, in: tileset.GetTextureAtlas()))
-        tile0.position = CGPoint(x: 10, y: 10)
-        tile0.size = CGSize(width: 32, height: 32)
-        addChild(tile0)*/
+        self.addChild(phiSphere)
     }
     
     override func update(_ currentTime: TimeInterval)
     {
         //self.update(currentTime)
+        
+        /*if let start = touchStartPos, let end = touchEndPos
+        {
+            if self.camera?.position != end
+            {
+                self.camera?.position = CGPoint(x: (self.camera?.position.x)! + 5.25, y: (self.camera?.position.y)! + 5.25)
+            }
+        }*/
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        touchStartPos = touches.first?.location(in: self)
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         self.camera?.position = touches.first!.location(in: self)
         print(camera?.position)
+        touchEndPos = touches.first?.location(in: self)
     }
 }
