@@ -6,7 +6,7 @@
 //  Copyright © 2017 ITNH. All rights reserved.
 //
 
-/*
+
 import Foundation
 import SpriteKit
 
@@ -30,4 +30,4 @@ class CircleNode: SimpleObjectNode {
         return sprite
     }
 }
-*/
+

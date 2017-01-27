@@ -6,7 +6,7 @@
 //  Copyright © 2017 ITNH. All rights reserved.
 //
 
-/*
+
 import Foundation
 import SpriteKit
 
@@ -14,4 +14,4 @@ class SimpleObjectNode: SKSpriteNode {
     var imgName: String = ""
     
 }
-*/
+

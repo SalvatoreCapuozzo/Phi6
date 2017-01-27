@@ -1,25 +1,25 @@
 //
-//  TriangleNode-Alpha.swift
+//  RectangleNode-Alpha.swift
 //  Phi6
 //
-//  Created by Salvatore Capuozzo on 24/01/2017.
+//  Created by Lord Capuozzo on 24/01/2017.
 //  Copyright © 2017 ITNH. All rights reserved.
 //
 
-/*
+
 import Foundation
 import SpriteKit
 
-class TriangleNode: SimpleObjectNode {
-    class func triangle(location: CGPoint) -> SimpleObjectNode {
-        let sprite = TriangleNode(imageNamed: "Triangle.png")
+class RectangleNode: SimpleObjectNode {
+    class func rectangle(location: CGPoint) -> RectangleNode {
+        let sprite = RectangleNode(imageNamed: "Rectangle.png")
         
         sprite.xScale = 0.075
         sprite.yScale = 0.075
         sprite.position = location
-        sprite.imgName = "Triangle.png"
+        sprite.imgName = "Rectangle.png"
         
-        sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "Triangle.png"), size: sprite.size)
+        sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "Rectangle.png"), size: sprite.size)
         if let physics = sprite.physicsBody {
             physics.affectedByGravity = false
             physics.allowsRotation = true
@@ -30,4 +30,4 @@ class TriangleNode: SimpleObjectNode {
         return sprite
     }
 }
-*/
+
