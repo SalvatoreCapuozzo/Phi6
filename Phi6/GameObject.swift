@@ -2,14 +2,13 @@
 //  GameObject.swift
 //  Phi6
 //
-//  Created by Gennaro Nappi on 27/01/17.
+//  Created by Salvatore Capuozzo on 27/01/2017.
 //  Copyright © 2017 ITNH. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
 
-class GameObject : SKSpriteNode
-{
+class GameObject : SKSpriteNode {
     
 }

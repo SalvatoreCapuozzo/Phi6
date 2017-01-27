@@ -10,7 +10,7 @@
 import Foundation
 import SpriteKit
 
-class SimpleObjectNode: SKSpriteNode {
+class SimpleObjectNode: GameObject {
     var imgName: String = ""
     
 }
