@@ -9,81 +9,85 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene
+{
+    private var cam = SKCameraNode()
+    private var testMap: TileMap?
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
-    
-    override func didMove(to view: SKView) {
+    override init(size: CGSize)
+    {
+        super.init(size: size)
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
+        //cam.position = CGPoint(x: 0, y: -200)
+        //cam.setScale(0.5)
+        
+        self.camera = cam
+        self.addChild(cam)
+        
+        do
+        {
+            testMap = try TileMap(filename: "map_00")
+            testMap?.Render(self)
         }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+        catch
+        {
             
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
         }
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
+    required init?(coder aDecoder: NSCoder)
+    {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
+    override func sceneDidLoad()
+    {
+        super.sceneDidLoad()
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        /*let tileset = Tileset(name: "pkmn_tileset", tSize: 16)
+        /*addChild(Tile(tSet: tileset, pos: CGPoint(x: 100, y: 100), id: 0))
+        addChild(Tile(tSet: tileset, pos: CGPoint(x: 116, y: 100), id: 1))
+        addChild(Tile(tSet: tileset, pos: CGPoint(x: 132, y: 100), id: 2))*/
+        
+        var currentIndex = 0
+        var x = 0
+        var y = 0
+        var keepAdding: Bool = true
+        
+        while(y < Int(tileset.GetTextureAtlas().size().height) && keepAdding)
+        {
+            x = 0
+            
+            while(x < Int(tileset.GetTextureAtlas().size().width) && keepAdding)
+            {
+                addChild(Tile(tSet: tileset, pos: CGPoint(x: CGFloat(x), y: self.frame.maxY - CGFloat(y)), id: currentIndex))
+                
+                x += 16
+                currentIndex += 1
+                
+                if currentIndex > tileset.GetNumberOfTiles()
+                {
+                    keepAdding = false
+                }
+            }
+            
+            y += 16
+        }*/
+        
+        /*
+        let tile0 = SKSpriteNode(texture: SKTexture(rect: tileset.GetTileRect(0)!, in: tileset.GetTextureAtlas()))
+        tile0.position = CGPoint(x: 10, y: 10)
+        tile0.size = CGSize(width: 32, height: 32)
+        addChild(tile0)*/
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+    override func update(_ currentTime: TimeInterval)
+    {
+        //self.update(currentTime)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        self.camera?.position = touches.first!.location(in: self)
+        print(camera?.position)
     }
 }
