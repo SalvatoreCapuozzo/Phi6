@@ -17,6 +17,17 @@
 		816CD0C71E3806D3003DE7E3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 816CD0C61E3806D3003DE7E3 /* iCarousel.m */; };
 		816CD0C91E38078E003DE7E3 /* CarusiellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */; };
 		816CD0CB1E3807E9003DE7E3 /* giovanniprota.png in Resources */ = {isa = PBXBuildFile; fileRef = 816CD0CA1E3807E9003DE7E3 /* giovanniprota.png */; };
+		871967F21E3CB55E00E4A14E /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871967F11E3CB55E00E4A14E /* Logic.swift */; };
+		871967F41E3CB65600E4A14E /* AndGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871967F31E3CB65600E4A14E /* AndGate.swift */; };
+		871967F61E3CB7C900E4A14E /* OrGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871967F51E3CB7C900E4A14E /* OrGate.swift */; };
+		871967F81E3CB7F600E4A14E /* NotGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871967F71E3CB7F600E4A14E /* NotGate.swift */; };
+		871967FD1E3CBA3400E4A14E /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871967FC1E3CBA3400E4A14E /* Sensor.swift */; };
+		871967FF1E3CBB6E00E4A14E /* LaserAccelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871967FE1E3CBB6E00E4A14E /* LaserAccelerometer.swift */; };
+		871968011E3CBCC200E4A14E /* LaserRangefinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871968001E3CBCC200E4A14E /* LaserRangefinder.swift */; };
+		871968031E3CBD6500E4A14E /* LoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871968021E3CBD6500E4A14E /* LoadCell.swift */; };
+		871968051E3CBE2200E4A14E /* SpeedCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871968041E3CBE2200E4A14E /* SpeedCamera.swift */; };
+		871968071E3CBEC800E4A14E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871968061E3CBEC800E4A14E /* PhotoCell.swift */; };
+		871968091E3CC10000E4A14E /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871968081E3CC10000E4A14E /* Chronometer.swift */; };
 		871CAB1D1E374F84004F2DD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871CAB1C1E374F84004F2DD0 /* AppDelegate.swift */; };
 		871CAB231E374F84004F2DD0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871CAB221E374F84004F2DD0 /* GameScene.swift */; };
 		871CAB251E374F84004F2DD0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871CAB241E374F84004F2DD0 /* GameViewController.swift */; };
@@ -26,10 +37,10 @@
 		874234BD1E3C074200274EB7 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874234BC1E3C074200274EB7 /* GameObject.swift */; };
 		878029931E37D76C00AA5EE9 /* GameScene-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029921E37D76C00AA5EE9 /* GameScene-Alpha.swift */; };
 		878029951E37D78400AA5EE9 /* GameViewController-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029941E37D78400AA5EE9 /* GameViewController-Alpha.swift */; };
-		878029971E37D81800AA5EE9 /* SimpleObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029961E37D81800AA5EE9 /* SimpleObjectNode.swift */; };
-		878029991E37D85E00AA5EE9 /* TriangleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029981E37D85E00AA5EE9 /* TriangleNode.swift */; };
-		8780299B1E37D88300AA5EE9 /* RectangleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299A1E37D88300AA5EE9 /* RectangleNode.swift */; };
-		8780299D1E37D8A400AA5EE9 /* CircleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299C1E37D8A400AA5EE9 /* CircleNode.swift */; };
+		878029971E37D81800AA5EE9 /* SimpleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029961E37D81800AA5EE9 /* SimpleObject.swift */; };
+		878029991E37D85E00AA5EE9 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029981E37D85E00AA5EE9 /* Triangle.swift */; };
+		8780299B1E37D88300AA5EE9 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299A1E37D88300AA5EE9 /* Rectangle.swift */; };
+		8780299D1E37D8A400AA5EE9 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299C1E37D8A400AA5EE9 /* Circle.swift */; };
 		8780299F1E37D8C800AA5EE9 /* Singleton-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780299E1E37D8C800AA5EE9 /* Singleton-Alpha.swift */; };
 		878029A11E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029A01E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift */; };
 		878029A31E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878029A21E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift */; };
@@ -48,6 +59,17 @@
 		816CD0C61E3806D3003DE7E3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		816CD0C81E38078E003DE7E3 /* CarusiellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarusiellViewController.swift; sourceTree = "<group>"; };
 		816CD0CA1E3807E9003DE7E3 /* giovanniprota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giovanniprota.png; sourceTree = "<group>"; };
+		871967F11E3CB55E00E4A14E /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		871967F31E3CB65600E4A14E /* AndGate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AndGate.swift; sourceTree = "<group>"; };
+		871967F51E3CB7C900E4A14E /* OrGate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrGate.swift; sourceTree = "<group>"; };
+		871967F71E3CB7F600E4A14E /* NotGate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotGate.swift; sourceTree = "<group>"; };
+		871967FC1E3CBA3400E4A14E /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		871967FE1E3CBB6E00E4A14E /* LaserAccelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserAccelerometer.swift; sourceTree = "<group>"; };
+		871968001E3CBCC200E4A14E /* LaserRangefinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserRangefinder.swift; sourceTree = "<group>"; };
+		871968021E3CBD6500E4A14E /* LoadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadCell.swift; sourceTree = "<group>"; };
+		871968041E3CBE2200E4A14E /* SpeedCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedCamera.swift; sourceTree = "<group>"; };
+		871968061E3CBEC800E4A14E /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		871968081E3CC10000E4A14E /* Chronometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chronometer.swift; sourceTree = "<group>"; };
 		871CAB191E374F84004F2DD0 /* Phi6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phi6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		871CAB1C1E374F84004F2DD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		871CAB221E374F84004F2DD0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -60,10 +82,10 @@
 		874234BE1E3C077E00274EB7 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameObject.swift; path = Phi6/GameObject.swift; sourceTree = "<group>"; };
 		878029921E37D76C00AA5EE9 /* GameScene-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene-Alpha.swift"; sourceTree = "<group>"; };
 		878029941E37D78400AA5EE9 /* GameViewController-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController-Alpha.swift"; sourceTree = "<group>"; };
-		878029961E37D81800AA5EE9 /* SimpleObjectNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleObjectNode.swift; sourceTree = "<group>"; };
-		878029981E37D85E00AA5EE9 /* TriangleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleNode.swift; sourceTree = "<group>"; };
-		8780299A1E37D88300AA5EE9 /* RectangleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleNode.swift; sourceTree = "<group>"; };
-		8780299C1E37D8A400AA5EE9 /* CircleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleNode.swift; sourceTree = "<group>"; };
+		878029961E37D81800AA5EE9 /* SimpleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleObject.swift; sourceTree = "<group>"; };
+		878029981E37D85E00AA5EE9 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		8780299A1E37D88300AA5EE9 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		8780299C1E37D8A400AA5EE9 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		8780299E1E37D8C800AA5EE9 /* Singleton-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Singleton-Alpha.swift"; sourceTree = "<group>"; };
 		878029A01E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectTableViewController-Alpha.swift"; sourceTree = "<group>"; };
 		878029A21E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectTableViewCell-Alpha.swift"; sourceTree = "<group>"; };
@@ -83,14 +105,11 @@
 		5AC3E0C41E38ACA000FA0D7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8780299A1E37D88300AA5EE9 /* RectangleNode.swift */,
-				878029961E37D81800AA5EE9 /* SimpleObjectNode.swift */,
-				878029981E37D85E00AA5EE9 /* TriangleNode.swift */,
-				3F89565A1E3B3B03004F66AC /* Tile.swift */,
-				3F89565B1E3B3B03004F66AC /* TileMap.swift */,
-				3F89565C1E3B3B03004F66AC /* Tileset.swift */,
-				8780299C1E37D8A400AA5EE9 /* CircleNode.swift */,
 				874234BC1E3C074200274EB7 /* GameObject.swift */,
+				871967F91E3CB9C000E4A14E /* SimpleObject */,
+				871967FA1E3CB9E700E4A14E /* Logic */,
+				8719680A1E3CC32000E4A14E /* Sensor */,
+				871967FB1E3CBA0500E4A14E /* Tile */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,6 +144,52 @@
 				816CD0C41E3806D2003DE7E3 /* Phi6-Bridging-Header.h */,
 			);
 			name = iCarousel;
+			sourceTree = "<group>";
+		};
+		871967F91E3CB9C000E4A14E /* SimpleObject */ = {
+			isa = PBXGroup;
+			children = (
+				878029961E37D81800AA5EE9 /* SimpleObject.swift */,
+				8780299A1E37D88300AA5EE9 /* Rectangle.swift */,
+				878029981E37D85E00AA5EE9 /* Triangle.swift */,
+				8780299C1E37D8A400AA5EE9 /* Circle.swift */,
+			);
+			name = SimpleObject;
+			sourceTree = "<group>";
+		};
+		871967FA1E3CB9E700E4A14E /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				871967F11E3CB55E00E4A14E /* Logic.swift */,
+				871967F31E3CB65600E4A14E /* AndGate.swift */,
+				871967F51E3CB7C900E4A14E /* OrGate.swift */,
+				871967F71E3CB7F600E4A14E /* NotGate.swift */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		871967FB1E3CBA0500E4A14E /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				3F89565A1E3B3B03004F66AC /* Tile.swift */,
+				3F89565B1E3B3B03004F66AC /* TileMap.swift */,
+				3F89565C1E3B3B03004F66AC /* Tileset.swift */,
+			);
+			name = Tile;
+			sourceTree = "<group>";
+		};
+		8719680A1E3CC32000E4A14E /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				871967FC1E3CBA3400E4A14E /* Sensor.swift */,
+				871967FE1E3CBB6E00E4A14E /* LaserAccelerometer.swift */,
+				871968001E3CBCC200E4A14E /* LaserRangefinder.swift */,
+				871968021E3CBD6500E4A14E /* LoadCell.swift */,
+				871968041E3CBE2200E4A14E /* SpeedCamera.swift */,
+				871968061E3CBEC800E4A14E /* PhotoCell.swift */,
+				871968081E3CC10000E4A14E /* Chronometer.swift */,
+			);
+			name = Sensor;
 			sourceTree = "<group>";
 		};
 		871CAB101E374F84004F2DD0 = {
@@ -250,26 +315,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				874234BD1E3C074200274EB7 /* GameObject.swift in Sources */,
+				871967F61E3CB7C900E4A14E /* OrGate.swift in Sources */,
 				3F89565D1E3B3B03004F66AC /* Tile.swift in Sources */,
 				3F8956611E3B3B10004F66AC /* CustomErrors.swift in Sources */,
 				871CAB231E374F84004F2DD0 /* GameScene.swift in Sources */,
+				871968011E3CBCC200E4A14E /* LaserRangefinder.swift in Sources */,
+				871967F41E3CB65600E4A14E /* AndGate.swift in Sources */,
 				3F89565F1E3B3B03004F66AC /* Tileset.swift in Sources */,
 				871CAB251E374F84004F2DD0 /* GameViewController.swift in Sources */,
 				8780299F1E37D8C800AA5EE9 /* Singleton-Alpha.swift in Sources */,
+				871967FF1E3CBB6E00E4A14E /* LaserAccelerometer.swift in Sources */,
+				871968031E3CBD6500E4A14E /* LoadCell.swift in Sources */,
 				878029A31E37D93C00AA5EE9 /* ObjectTableViewCell-Alpha.swift in Sources */,
-				8780299B1E37D88300AA5EE9 /* RectangleNode.swift in Sources */,
+				8780299B1E37D88300AA5EE9 /* Rectangle.swift in Sources */,
 				816CD0C71E3806D3003DE7E3 /* iCarousel.m in Sources */,
 				871CAB1D1E374F84004F2DD0 /* AppDelegate.swift in Sources */,
+				871967FD1E3CBA3400E4A14E /* Sensor.swift in Sources */,
 				878029951E37D78400AA5EE9 /* GameViewController-Alpha.swift in Sources */,
+				871968091E3CC10000E4A14E /* Chronometer.swift in Sources */,
+				871967F81E3CB7F600E4A14E /* NotGate.swift in Sources */,
 				878029931E37D76C00AA5EE9 /* GameScene-Alpha.swift in Sources */,
+				871968051E3CBE2200E4A14E /* SpeedCamera.swift in Sources */,
 				8116C1511E38B2340075A006 /* MainViewController.swift in Sources */,
+				871967F21E3CB55E00E4A14E /* Logic.swift in Sources */,
 				816CD0C91E38078E003DE7E3 /* CarusiellViewController.swift in Sources */,
+				871968071E3CBEC800E4A14E /* PhotoCell.swift in Sources */,
 				3F8956591E3B3AF7004F66AC /* LevelViewController.swift in Sources */,
-				878029971E37D81800AA5EE9 /* SimpleObjectNode.swift in Sources */,
+				878029971E37D81800AA5EE9 /* SimpleObject.swift in Sources */,
 				878029A11E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift in Sources */,
-				878029991E37D85E00AA5EE9 /* TriangleNode.swift in Sources */,
+				878029991E37D85E00AA5EE9 /* Triangle.swift in Sources */,
 				3F89565E1E3B3B03004F66AC /* TileMap.swift in Sources */,
-				8780299D1E37D8A400AA5EE9 /* CircleNode.swift in Sources */,
+				8780299D1E37D8A400AA5EE9 /* Circle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

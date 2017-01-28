@@ -10,14 +10,16 @@
 import Foundation
 import SpriteKit
 
-class RectangleNode: SimpleObjectNode {
-    class func rectangle(location: CGPoint) -> RectangleNode {
-        let sprite = RectangleNode(imageNamed: "Rectangle.png")
+class Rectangle: SKSpriteNode, SimpleObject {
+    var resizable: Bool = true
+    var imgName: String = "Rectangle.png"
+    class func rectangle(location: CGPoint) -> Rectangle {
+        let sprite = Rectangle(imageNamed: "Rectangle.png")
         
         sprite.xScale = 0.075
         sprite.yScale = 0.075
         sprite.position = location
-        sprite.imgName = "Rectangle.png"
+        sprite.imgName = "Rectangle.png" // Devo verificare se questa riga è ridondante
         
         sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "Rectangle.png"), size: sprite.size)
         if let physics = sprite.physicsBody {

@@ -10,8 +10,9 @@
 import Foundation
 import SpriteKit
 
-class SimpleObjectNode: GameObject {
-    var imgName: String = ""
-    
+protocol SimpleObject: GameObject {
+    var resizable: Bool {get set}
+    var imgName: String {get set}
+    // Inserire variabile che distingue SimpleObject da Logic
 }
 
