@@ -10,16 +10,45 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var pendulumBase: UIImageView!
+    @IBOutlet weak var pendulumGroup: UIImageView!
+    
     var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var rotationPoint = pendulumBase.center // The point we are rotating around
+        rotationPoint.x = rotationPoint.x - 2
+            
+        let minX   = view.frame.minX;
+        let minY   = view.frame.minY;
+        let width  = view.frame.width;
+        let height = view.frame.height;
         
-        //getRandomColor()
-       // timerF()
+        let anchorPoint =  CGPoint(x: (rotationPoint.x-minX)/width,
+                                   y: (rotationPoint.y-minY)/height);
+        
+        pendulumGroup.layer.anchorPoint = anchorPoint;
+        pendulumGroup.layer.position = rotationPoint;
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        swing()
+    }
+    
+    func swing() {
+        UIView.animateAndChain(withDuration: 2, delay: 0, options: [.curveEaseInOut], animations: {
+            self.pendulumGroup.transform = CGAffineTransform(rotationAngle: CGFloat.pi * (45/180))
+        }, completion: nil).animate(withDuration: 2, delay: 0, options: [.repeat, .curveEaseInOut ], animations: {
+            self.pendulumGroup.transform = CGAffineTransform(rotationAngle: -(CGFloat.pi * (45/180)))
 
-    override func didReceiveMemoryWarning() {
+        }, completion: nil)   }
+    
+  
+
+    
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -27,6 +56,9 @@ class MainViewController: UIViewController {
     func timerF(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MainViewController.getRandomColor), userInfo: nil, repeats: true)
     }
+    
+    
+    
 
     
     func getRandomColor() {
@@ -39,6 +71,8 @@ class MainViewController: UIViewController {
             self.view.backgroundColor = UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: alpha)
         }, completion:nil)
     }
+    
+
     // Do any additional setup after loading the view.
 
     
