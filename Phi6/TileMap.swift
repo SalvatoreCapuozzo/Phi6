@@ -14,6 +14,7 @@ class TileMap
 {
     private var mapName: String!
     private var mapSize: CGSize!
+    private var backgroundImage: String!
     private var tileset: Tileset!
     private var tiles = [Tile]()
     
@@ -43,6 +44,8 @@ class TileMap
         mapSize = CGSize(width: width, height: height)
         
         tileset = Tileset(name: json["tileset"] as! String, tSize: 32)
+        // Preleva il nome del background che sara' resizato in base alla grandezza della map
+        backgroundImage = json["background"] as! String
         // Carica i tiles
         let loadedTiles = json["tiles"] as! [Int]
         var currentID: Int
@@ -50,6 +53,7 @@ class TileMap
         var y = 0
         var i = 0
         
+        // Devo invertire le posizioni iniziali da 0 a W / H
         while y < height
         {
             while x < width
@@ -69,7 +73,7 @@ class TileMap
             y += tileset.GetTileSize()
         }
         
-        print(mapName, mapSize)
+        //print(mapName, mapSize)
     }
     
     func SaveMap(filename: String)
@@ -78,6 +82,13 @@ class TileMap
     
     func Render(_ scene: SKScene)
     {
+        // Mostra prima il background
+        let bg = SKSpriteNode(texture: SKTexture(imageNamed: backgroundImage))
+        bg.size = mapSize
+        bg.zPosition = -1
+        bg.position = CGPoint(x: mapSize.width / 2 - 16, y: mapSize.height / 2 - 16)
+        scene.addChild(bg)
+        // Per poi piazzarci sopra i tiles
         for t in tiles
         {
             scene.addChild(t)

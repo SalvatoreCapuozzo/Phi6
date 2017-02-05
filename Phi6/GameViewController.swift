@@ -12,11 +12,13 @@ import GameplayKit
 
 class GameViewController: UIViewController
 {
+    private var scene: GameScene!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        let scene = GameScene(size: view.frame.size)
+        scene = GameScene(size: view.frame.size)
         scene.scaleMode = .resizeFill
         
         if let view = self.view as! SKView?
@@ -51,5 +53,10 @@ class GameViewController: UIViewController
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func ResetPressed(_ sender: UIButton)
+    {
+        scene.ResetSimulation()
     }
 }

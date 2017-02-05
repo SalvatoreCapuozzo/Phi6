@@ -18,3 +18,8 @@ enum TileErrors : Error
 {
     case InvalidTile
 }
+
+enum ObjectCacherErrors : Error
+{
+    case AlreadyCached
+}

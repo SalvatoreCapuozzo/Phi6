@@ -1,6 +1,7 @@
 {
     "mapName": "Test",
     "tileset": "minecraft.png",
+    "background": "Background.png",
     "width": 256,
     "height": 256,
     "tiles": [2, 2, 2, 2, 2, 2, 2, 2,

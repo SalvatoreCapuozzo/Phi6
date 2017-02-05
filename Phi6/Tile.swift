@@ -9,6 +9,9 @@
 import Foundation
 import SpriteKit
 import UIKit
+import CoreGraphics
+
+let tilePhysicsBodyCacher = ObjectCacher<Int, SKPhysicsBody>()
 
 class Tile : SKSpriteNode
 {
@@ -32,12 +35,26 @@ class Tile : SKSpriteNode
         super.init(texture: subTexture,
                    color: UIColor(red: 1, green: 1, blue: 1, alpha: 1),
                    size: CGSize(width: tileSize, height: tileSize))
+        
         self.position = pos
         
-        // Setta il PhysicsBody
-        var phyBody = SKPhysicsBody(texture: subTexture!, size: CGSize(width: tileSize, height: tileSize))
-        phyBody.isDynamic = false
+        // Setta il PhysicsBody prelevandolo dal cacher se esiste o generandolo, in caso contrario
+        let phyBody: SKPhysicsBody
         
+        if let tileBody = tilePhysicsBodyCacher.GetObjectBy(key: id)
+        {
+            phyBody = tileBody.copy() as! SKPhysicsBody
+        }
+        else
+        {
+            let generatedBody = GeneratePhysicsBodyFrom(texture: subTexture!, alphaThreshold: 0.5, offset: CGFloat(tileSize) / 2)
+            tilePhysicsBodyCacher.CacheObject(key: id, object: generatedBody)
+            phyBody = generatedBody
+        }
+        
+        phyBody.isDynamic = false
+        phyBody.categoryBitMask = CollisionCategories.SOLID_TILE.rawValue
+        phyBody.collisionBitMask = CollisionCategories.PHISPHERE.rawValue
         self.physicsBody = phyBody
     }
     

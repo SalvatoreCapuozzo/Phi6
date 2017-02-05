@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F81D64E1E472DD600098176 /* PhysicsBodyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F81D64D1E472DD600098176 /* PhysicsBodyGenerator.swift */; };
+		3F81D6511E4732D900098176 /* ObjectCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F81D6501E4732D900098176 /* ObjectCacher.swift */; };
 		3F8956591E3B3AF7004F66AC /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8956581E3B3AF7004F66AC /* LevelViewController.swift */; };
 		3F89565D1E3B3B03004F66AC /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89565A1E3B3B03004F66AC /* Tile.swift */; };
 		3F89565E1E3B3B03004F66AC /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89565B1E3B3B03004F66AC /* TileMap.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F81D64D1E472DD600098176 /* PhysicsBodyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsBodyGenerator.swift; sourceTree = "<group>"; };
+		3F81D6501E4732D900098176 /* ObjectCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectCacher.swift; sourceTree = "<group>"; };
 		3F8956581E3B3AF7004F66AC /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		3F89565A1E3B3B03004F66AC /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		3F89565B1E3B3B03004F66AC /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
@@ -118,6 +122,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F81D64F1E4732A700098176 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				3F8956601E3B3B10004F66AC /* CustomErrors.swift */,
+				3F81D64D1E472DD600098176 /* PhysicsBodyGenerator.swift */,
+				3F81D6501E4732D900098176 /* ObjectCacher.swift */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		5AC3E0C41E38ACA000FA0D7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +276,7 @@
 		871CAB1B1E374F84004F2DD0 /* Phi6 */ = {
 			isa = PBXGroup;
 			children = (
-				3F8956601E3B3B10004F66AC /* CustomErrors.swift */,
+				3F81D64F1E4732A700098176 /* Framework */,
 				5AC3E0C41E38ACA000FA0D7D /* Model */,
 				5AC3E0C51E38ACAC00FA0D7D /* View */,
 				5AC3E0C61E38ACB800FA0D7D /* Controller */,
@@ -383,6 +397,7 @@
 				8780299B1E37D88300AA5EE9 /* Rectangle.swift in Sources */,
 				81CF605E1E3F5B22006019FE /* EAAnimationFuture.swift in Sources */,
 				816CD0C71E3806D3003DE7E3 /* iCarousel.m in Sources */,
+				3F81D64E1E472DD600098176 /* PhysicsBodyGenerator.swift in Sources */,
 				871CAB1D1E374F84004F2DD0 /* AppDelegate.swift in Sources */,
 				871967FD1E3CBA3400E4A14E /* Sensor.swift in Sources */,
 				878029951E37D78400AA5EE9 /* GameViewController-Alpha.swift in Sources */,
@@ -399,6 +414,7 @@
 				878029971E37D81800AA5EE9 /* SimpleObject.swift in Sources */,
 				878029A11E37D8F900AA5EE9 /* ObjectTableViewController-Alpha.swift in Sources */,
 				81CF60651E3F5B22006019FE /* RBBSpringAnimation.swift in Sources */,
+				3F81D6511E4732D900098176 /* ObjectCacher.swift in Sources */,
 				878029991E37D85E00AA5EE9 /* Triangle.swift in Sources */,
 				3F89565E1E3B3B03004F66AC /* TileMap.swift in Sources */,
 				81CF605F1E3F5B22006019FE /* EasyAnimation.swift in Sources */,

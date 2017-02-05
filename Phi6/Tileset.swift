@@ -35,9 +35,9 @@ class Tileset
                 let rect = CGRect(x: CGFloat(x) / textureAtlas.size().width,
                                   y: CGFloat(y) / textureAtlas.size().height,
                                   width: CGFloat(tileSize) / textureAtlas.size().width,
-                                  height: CGFloat(tileSize) / textureAtlas.size().height)
+                                  height: CGFloat(tileSize - 1) / textureAtlas.size().height)
                 
-                print(x, y)
+                //print(x, y, rect)
                 tileRects.append(rect)
                 
                 x += tileSize
